@@ -40,4 +40,5 @@ qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,vendor=GenuineIntel,+invtsc,v
 	  -device ide-hd,bus=sata.4,drive=MacHDD \
 	  -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
 	  -monitor stdio \
-	  -vga vmware
+	  -vga vmware \
+	  -accel hvf
