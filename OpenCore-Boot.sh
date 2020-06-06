@@ -23,7 +23,6 @@ OVMF="./"
 # qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,hypervisor=off,vmx=on,kvm=off,$MY_OPTIONS\
 
 qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$MY_OPTIONS\
-	  -smp 4,cores=2 \
 	  -usb -device usb-kbd -device usb-mouse \
 	  -device isa-applesmc,osk="ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc" \
 	  -drive if=pflash,format=raw,readonly,file=$OVMF/OVMF_CODE.fd \
